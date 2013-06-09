@@ -1,0 +1,57 @@
+// Custom mixins
+.border (@type:solid, @width:1px, @color:@gray) {
+	border:@type @width @color;
+}
+
+.btn-defaults {
+    text-shadow: 1px 1px 1px lighten(@black,10%);
+	display: block;
+	cursor:pointer;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size:1.3em;
+	color: white;
+	padding: 0.8em 15px;
+	width: 100%;
+	.border-radius;
+	
+	&:active {
+		padding-top:0.9em;
+		padding-bottom:0.7em;
+		.inner-shadow (1px, 2px, 3px, 1px, 0.3);
+	}
+}
+.btn-flat (@color: @lightGray) {
+	.btn-defaults;
+	border: solid 1px darken(@color, 10%);
+	background-color: @color;
+}
+.btn-3d (@color: @lightGray) {
+	.btn-defaults;
+	border: solid 1px darken(@color, 15%);
+	.gradient (lighten(@color,5%), darken(@color,15%));
+	.drop-shadow (0, 3px, 0, 1px, @alpha: 0.10);
+}
+
+.input-box {
+	display: block;
+	border: 0;
+	padding: 1.2em @appStdInputPadding;
+	font-size:1em;
+	color:@darkGray;
+	background:@white;
+	width: 100%;
+	.border;
+	.border-radius;
+}
+.check-box {
+    width: @appCheckboxWidth;
+    height: @appCheckboxWidth;
+    margin: 0;
+    text-align: center;
+	border:solid 1px @gray;
+	background:@white;
+	.border-radius;
+	.inner-shadow (1px, 1px, 3px, 0, 0.15);
+}
