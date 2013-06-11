@@ -1,7 +1,4 @@
 // Custom mixins
-.border (@type:solid, @width:1px, @color:@gray) {
-	border:@type @width @color;
-}
 
 .btn-defaults {
     text-shadow: 1px 1px 1px lighten(@black,10%);
@@ -39,11 +36,9 @@
 	border: 0;
 	padding: 1.2em @appStdInputPadding;
 	font-size:1em;
-	color:@darkGray;
+	color:@gray;
 	background:@white;
 	width: 100%;
-	.border;
-	.border-radius;
 }
 .check-box {
     width: @appCheckboxWidth;
@@ -52,6 +47,5 @@
     text-align: center;
 	border:solid 1px @gray;
 	background:@white;
-	.border-radius;
 	.inner-shadow (1px, 1px, 3px, 0, 0.15);
 }
